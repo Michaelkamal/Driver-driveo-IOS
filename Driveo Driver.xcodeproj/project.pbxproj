@@ -14,6 +14,8 @@
 		840345CD20CD4C6900322359 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840345CB20CD4C6900322359 /* LaunchScreen.storyboard */; };
 		840345D820CD4C6900322359 /* Driveo_DriverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840345D720CD4C6900322359 /* Driveo_DriverTests.swift */; };
 		840345E320CD4C6900322359 /* Driveo_DriverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840345E220CD4C6900322359 /* Driveo_DriverUITests.swift */; };
+		8447DE0620CD6E6C00CB9EBA /* logofinal.png in Resources */ = {isa = PBXBuildFile; fileRef = 8447DE0520CD6E6C00CB9EBA /* logofinal.png */; };
+		DE764D38F05C24435F7595FC /* Pods_Driveo_Driver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B8B99A83CE057CDEA802FE /* Pods_Driveo_Driver.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,10 @@
 		840345DE20CD4C6900322359 /* Driveo DriverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Driveo DriverUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		840345E220CD4C6900322359 /* Driveo_DriverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Driveo_DriverUITests.swift; sourceTree = "<group>"; };
 		840345E420CD4C6900322359 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8447DE0520CD6E6C00CB9EBA /* logofinal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logofinal.png; sourceTree = "<group>"; };
+		C9B8B99A83CE057CDEA802FE /* Pods_Driveo_Driver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Driveo_Driver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAB285CDEFB5C5B574CB5255 /* Pods-Driveo Driver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Driveo Driver.release.xcconfig"; path = "Pods/Target Support Files/Pods-Driveo Driver/Pods-Driveo Driver.release.xcconfig"; sourceTree = "<group>"; };
+		F25983CAFD3069AE2B39A4F7 /* Pods-Driveo Driver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Driveo Driver.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Driveo Driver/Pods-Driveo Driver.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE764D38F05C24435F7595FC /* Pods_Driveo_Driver.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +81,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4DA7B5B5F9F65EF468F02B8C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9B8B99A83CE057CDEA802FE /* Pods_Driveo_Driver.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		840345B620CD4C6500322359 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +96,8 @@
 				840345D620CD4C6900322359 /* Driveo DriverTests */,
 				840345E120CD4C6900322359 /* Driveo DriverUITests */,
 				840345C020CD4C6600322359 /* Products */,
+				935E99ACD794A465C752B664 /* Pods */,
+				4DA7B5B5F9F65EF468F02B8C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,9 +114,12 @@
 		840345C120CD4C6600322359 /* Driveo Driver */ = {
 			isa = PBXGroup;
 			children = (
+				840345F320CD4C6900322359 /* Protocols */,
+				840345F220CD4C6900322359 /* Utilities */,
+				840345F120CD4C6900322359 /* Pojos */,
+				840345F020CD4C6900322359 /* Screens */,
 				840345C220CD4C6600322359 /* AppDelegate.swift */,
-				840345C420CD4C6600322359 /* ViewController.swift */,
-				840345C620CD4C6600322359 /* Main.storyboard */,
+				8447DE0520CD6E6C00CB9EBA /* logofinal.png */,
 				840345C920CD4C6900322359 /* Assets.xcassets */,
 				840345CB20CD4C6900322359 /* LaunchScreen.storyboard */,
 				840345CE20CD4C6900322359 /* Info.plist */,
@@ -125,6 +145,45 @@
 			path = "Driveo DriverUITests";
 			sourceTree = "<group>";
 		};
+		840345F020CD4C6900322359 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				840345C420CD4C6600322359 /* ViewController.swift */,
+				840345C620CD4C6600322359 /* Main.storyboard */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		840345F120CD4C6900322359 /* Pojos */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pojos;
+			sourceTree = "<group>";
+		};
+		840345F220CD4C6900322359 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		840345F320CD4C6900322359 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		935E99ACD794A465C752B664 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F25983CAFD3069AE2B39A4F7 /* Pods-Driveo Driver.debug.xcconfig */,
+				EAB285CDEFB5C5B574CB5255 /* Pods-Driveo Driver.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +191,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 840345E720CD4C6900322359 /* Build configuration list for PBXNativeTarget "Driveo Driver" */;
 			buildPhases = (
+				DD20A283A88B69F3087D4987 /* [CP] Check Pods Manifest.lock */,
 				840345BB20CD4C6600322359 /* Sources */,
 				840345BC20CD4C6600322359 /* Frameworks */,
 				840345BD20CD4C6600322359 /* Resources */,
+				BCC70111CFB4DA236ACDB2CC /* [CP] Embed Pods Frameworks */,
+				7262D6B32535745AA4CE08FE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,6 +255,11 @@
 				TargetAttributes = {
 					840345BE20CD4C6600322359 = {
 						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					840345D220CD4C6900322359 = {
 						CreatedOnToolsVersion = 9.3;
@@ -232,6 +299,7 @@
 				840345CD20CD4C6900322359 /* LaunchScreen.storyboard in Resources */,
 				840345CA20CD4C6900322359 /* Assets.xcassets in Resources */,
 				840345C820CD4C6600322359 /* Main.storyboard in Resources */,
+				8447DE0620CD6E6C00CB9EBA /* logofinal.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +318,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7262D6B32535745AA4CE08FE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Driveo Driver/Pods-Driveo Driver-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlacePicker/Frameworks/GooglePlacePicker.framework/Resources/GooglePlacePicker.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlacePicker.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Driveo Driver/Pods-Driveo Driver-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCC70111CFB4DA236ACDB2CC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Driveo Driver/Pods-Driveo Driver-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Driveo Driver/Pods-Driveo Driver-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD20A283A88B69F3087D4987 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Driveo Driver-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		840345BB20CD4C6600322359 /* Sources */ = {
@@ -428,6 +565,7 @@
 		};
 		840345E820CD4C6900322359 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F25983CAFD3069AE2B39A4F7 /* Pods-Driveo Driver.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -445,6 +583,7 @@
 		};
 		840345E920CD4C6900322359 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAB285CDEFB5C5B574CB5255 /* Pods-Driveo Driver.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
