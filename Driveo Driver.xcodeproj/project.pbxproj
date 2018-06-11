@@ -14,6 +14,12 @@
 		840345CD20CD4C6900322359 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840345CB20CD4C6900322359 /* LaunchScreen.storyboard */; };
 		840345D820CD4C6900322359 /* Driveo_DriverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840345D720CD4C6900322359 /* Driveo_DriverTests.swift */; };
 		840345E320CD4C6900322359 /* Driveo_DriverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840345E220CD4C6900322359 /* Driveo_DriverUITests.swift */; };
+		8405A0CD20CE9D6100A95E78 /* NetworkDAL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405A0CC20CE9D6100A95E78 /* NetworkDAL.swift */; };
+		8405A0D020CE9E1100A95E78 /* LocationManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405A0CE20CE9E1100A95E78 /* LocationManger.swift */; };
+		8405A0D120CE9E1100A95E78 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405A0CF20CE9E1100A95E78 /* StringExtension.swift */; };
+		8405A0D520CEA03500A95E78 /* LocationMangerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405A0D420CEA03500A95E78 /* LocationMangerProtocol.swift */; };
+		8405A0D720CEA07A00A95E78 /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405A0D620CEA07A00A95E78 /* ErrorType.swift */; };
+		8405A0D920CEA71300A95E78 /* OrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8405A0D820CEA71300A95E78 /* OrderCell.xib */; };
 		8447DE0620CD6E6C00CB9EBA /* logofinal.png in Resources */ = {isa = PBXBuildFile; fileRef = 8447DE0520CD6E6C00CB9EBA /* logofinal.png */; };
 		DE764D38F05C24435F7595FC /* Pods_Driveo_Driver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B8B99A83CE057CDEA802FE /* Pods_Driveo_Driver.framework */; };
 /* End PBXBuildFile section */
@@ -49,6 +55,12 @@
 		840345DE20CD4C6900322359 /* Driveo DriverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Driveo DriverUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		840345E220CD4C6900322359 /* Driveo_DriverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Driveo_DriverUITests.swift; sourceTree = "<group>"; };
 		840345E420CD4C6900322359 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8405A0CC20CE9D6100A95E78 /* NetworkDAL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkDAL.swift; path = "Driveo Driver/Utilities/NetworkDAL.swift"; sourceTree = SOURCE_ROOT; };
+		8405A0CE20CE9E1100A95E78 /* LocationManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManger.swift; sourceTree = "<group>"; };
+		8405A0CF20CE9E1100A95E78 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		8405A0D420CEA03500A95E78 /* LocationMangerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationMangerProtocol.swift; sourceTree = "<group>"; };
+		8405A0D620CEA07A00A95E78 /* ErrorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
+		8405A0D820CEA71300A95E78 /* OrderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderCell.xib; sourceTree = "<group>"; };
 		8447DE0520CD6E6C00CB9EBA /* logofinal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logofinal.png; sourceTree = "<group>"; };
 		C9B8B99A83CE057CDEA802FE /* Pods_Driveo_Driver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Driveo_Driver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAB285CDEFB5C5B574CB5255 /* Pods-Driveo Driver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Driveo Driver.release.xcconfig"; path = "Pods/Target Support Files/Pods-Driveo Driver/Pods-Driveo Driver.release.xcconfig"; sourceTree = "<group>"; };
@@ -150,6 +162,7 @@
 			children = (
 				840345C420CD4C6600322359 /* ViewController.swift */,
 				840345C620CD4C6600322359 /* Main.storyboard */,
+				8405A0D820CEA71300A95E78 /* OrderCell.xib */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -164,6 +177,10 @@
 		840345F220CD4C6900322359 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				8405A0D620CEA07A00A95E78 /* ErrorType.swift */,
+				8405A0CE20CE9E1100A95E78 /* LocationManger.swift */,
+				8405A0CF20CE9E1100A95E78 /* StringExtension.swift */,
+				8405A0CC20CE9D6100A95E78 /* NetworkDAL.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -171,6 +188,7 @@
 		840345F320CD4C6900322359 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				8405A0D420CEA03500A95E78 /* LocationMangerProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -296,6 +314,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8405A0D920CEA71300A95E78 /* OrderCell.xib in Resources */,
 				840345CD20CD4C6900322359 /* LaunchScreen.storyboard in Resources */,
 				840345CA20CD4C6900322359 /* Assets.xcassets in Resources */,
 				840345C820CD4C6600322359 /* Main.storyboard in Resources */,
@@ -393,7 +412,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8405A0D520CEA03500A95E78 /* LocationMangerProtocol.swift in Sources */,
+				8405A0D720CEA07A00A95E78 /* ErrorType.swift in Sources */,
+				8405A0CD20CE9D6100A95E78 /* NetworkDAL.swift in Sources */,
 				840345C520CD4C6600322359 /* ViewController.swift in Sources */,
+				8405A0D120CE9E1100A95E78 /* StringExtension.swift in Sources */,
+				8405A0D020CE9E1100A95E78 /* LocationManger.swift in Sources */,
 				840345C320CD4C6600322359 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
