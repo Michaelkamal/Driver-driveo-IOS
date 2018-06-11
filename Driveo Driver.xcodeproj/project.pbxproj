@@ -20,7 +20,8 @@
 		8405A0D520CEA03500A95E78 /* LocationMangerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405A0D420CEA03500A95E78 /* LocationMangerProtocol.swift */; };
 		8405A0D720CEA07A00A95E78 /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405A0D620CEA07A00A95E78 /* ErrorType.swift */; };
 		8405A0D920CEA71300A95E78 /* OrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8405A0D820CEA71300A95E78 /* OrderCell.xib */; };
-		8427C13720CEB80700DCB374 /* OrderDetailes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8427C13620CEB80700DCB374 /* OrderDetailes.storyboard */; };
+		8427C14720CED0B200DCB374 /* OrderDetailesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8427C14520CED0B200DCB374 /* OrderDetailesView.swift */; };
+		8427C14A20CED14700DCB374 /* OrderDetailes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8427C14920CED14600DCB374 /* OrderDetailes.storyboard */; };
 		8447DE0620CD6E6C00CB9EBA /* logofinal.png in Resources */ = {isa = PBXBuildFile; fileRef = 8447DE0520CD6E6C00CB9EBA /* logofinal.png */; };
 		8489A9FC20CEB8B4001EF18F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8489A9F820CEB8B4001EF18F /* LoginViewController.swift */; };
 		8489A9FD20CEB8B4001EF18F /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8489A9F920CEB8B4001EF18F /* LoginModel.swift */; };
@@ -80,6 +81,8 @@
 		8405A0D620CEA07A00A95E78 /* ErrorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
 		8405A0D820CEA71300A95E78 /* OrderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderCell.xib; sourceTree = "<group>"; };
 		8427C13620CEB80700DCB374 /* OrderDetailes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OrderDetailes.storyboard; sourceTree = "<group>"; };
+		8427C14520CED0B200DCB374 /* OrderDetailesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailesView.swift; sourceTree = "<group>"; };
+		8427C14920CED14600DCB374 /* OrderDetailes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OrderDetailes.storyboard; sourceTree = "<group>"; };
 		8447DE0520CD6E6C00CB9EBA /* logofinal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logofinal.png; sourceTree = "<group>"; };
 		8489A9F820CEB8B4001EF18F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8489A9F920CEB8B4001EF18F /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
@@ -198,10 +201,10 @@
 		840345F020CD4C6900322359 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				8427C14020CED07F00DCB374 /* OrderDetailsScreen */,
 				8489AA3020CEC98E001EF18F /* HomeScreen */,
 				8489AA1120CEBA41001EF18F /* SplashScreen */,
 				8489AA1020CEBA2A001EF18F /* AboutScreen */,
-				8489A9F720CEB7F1001EF18F /* Splash */,
 				8489A9F620CEB7E9001EF18F /* Login */,
 			);
 			path = Screens;
@@ -228,6 +231,15 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		8427C14020CED07F00DCB374 /* OrderDetailsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8427C14920CED14600DCB374 /* OrderDetailes.storyboard */,
+				8427C14520CED0B200DCB374 /* OrderDetailesView.swift */,
+			);
+			path = OrderDetailsScreen;
+			sourceTree = "<group>";
+		};
 		8489A9F620CEB7E9001EF18F /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,13 +249,6 @@
 				8489A9F820CEB8B4001EF18F /* LoginViewController.swift */,
 			);
 			path = Login;
-			sourceTree = "<group>";
-		};
-		8489A9F720CEB7F1001EF18F /* Splash */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Splash;
 			sourceTree = "<group>";
 		};
 		8489AA1020CEBA2A001EF18F /* AboutScreen */ = {
@@ -436,10 +441,10 @@
 				8405A0D920CEA71300A95E78 /* OrderCell.xib in Resources */,
 				840345CD20CD4C6900322359 /* LaunchScreen.storyboard in Resources */,
 				8489A9FE20CEB8B4001EF18F /* Login.storyboard in Resources */,
+				8427C14A20CED14700DCB374 /* OrderDetailes.storyboard in Resources */,
 				840345CA20CD4C6900322359 /* Assets.xcassets in Resources */,
 				8489AA0320CEB8C6001EF18F /* LauchScreen.storyboard in Resources */,
 				840345C820CD4C6600322359 /* Main.storyboard in Resources */,
-				8427C13720CEB80700DCB374 /* OrderDetailes.storyboard in Resources */,
 				8447DE0620CD6E6C00CB9EBA /* logofinal.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -552,6 +557,7 @@
 				8405A0D020CE9E1100A95E78 /* LocationManger.swift in Sources */,
 				8489AA0E20CEB94D001EF18F /* UIButtonExtension.swift in Sources */,
 				840345C320CD4C6600322359 /* AppDelegate.swift in Sources */,
+				8427C14720CED0B200DCB374 /* OrderDetailesView.swift in Sources */,
 				8489AA0F20CEB94D001EF18F /* LocationMangerProtocolExtention.swift in Sources */,
 				8489AA0820CEB8E3001EF18F /* AboutScreen.swift in Sources */,
 				8489AA2B20CEC5D5001EF18F /* User.swift in Sources */,
