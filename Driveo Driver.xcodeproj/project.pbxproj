@@ -201,7 +201,7 @@
 		840345F020CD4C6900322359 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				8427C14020CED07F00DCB374 /* OrderDetailsScreen */,
+				8427C14B20CED1BA00DCB374 /* OrderDetails */,
 				8489AA3020CEC98E001EF18F /* HomeScreen */,
 				8489AA1120CEBA41001EF18F /* SplashScreen */,
 				8489AA1020CEBA2A001EF18F /* AboutScreen */,
@@ -231,13 +231,13 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		8427C14020CED07F00DCB374 /* OrderDetailsScreen */ = {
+		8427C14B20CED1BA00DCB374 /* OrderDetails */ = {
 			isa = PBXGroup;
 			children = (
 				8427C14920CED14600DCB374 /* OrderDetailes.storyboard */,
 				8427C14520CED0B200DCB374 /* OrderDetailesView.swift */,
 			);
-			path = OrderDetailsScreen;
+			path = OrderDetails;
 			sourceTree = "<group>";
 		};
 		8489A9F620CEB7E9001EF18F /* Login */ = {
