@@ -171,7 +171,6 @@
 				840345F220CD4C6900322359 /* Utilities */,
 				840345F020CD4C6900322359 /* Screens */,
 				840345C220CD4C6600322359 /* AppDelegate.swift */,
-				840345C420CD4C6600322359 /* ViewController.swift */,
 				8447DE0520CD6E6C00CB9EBA /* logofinal.png */,
 				840345C920CD4C6900322359 /* Assets.xcassets */,
 				840345CB20CD4C6900322359 /* LaunchScreen.storyboard */,
@@ -308,6 +307,7 @@
 		8489AA3020CEC98E001EF18F /* HomeScreen */ = {
 			isa = PBXGroup;
 			children = (
+				840345C420CD4C6600322359 /* ViewController.swift */,
 				840345C620CD4C6600322359 /* Main.storyboard */,
 				8405A0D820CEA71300A95E78 /* OrderCell.xib */,
 				8489AA1320CEC1F6001EF18F /* OrderCell.swift */,
