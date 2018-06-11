@@ -20,6 +20,8 @@
 		8405A0D520CEA03500A95E78 /* LocationMangerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405A0D420CEA03500A95E78 /* LocationMangerProtocol.swift */; };
 		8405A0D720CEA07A00A95E78 /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405A0D620CEA07A00A95E78 /* ErrorType.swift */; };
 		8405A0D920CEA71300A95E78 /* OrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8405A0D820CEA71300A95E78 /* OrderCell.xib */; };
+		8427C13520CEB7EE00DCB374 /* OrderDetailesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8427C13420CEB7EE00DCB374 /* OrderDetailesView.swift */; };
+		8427C13720CEB80700DCB374 /* OrderDetailes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8427C13620CEB80700DCB374 /* OrderDetailes.storyboard */; };
 		8447DE0620CD6E6C00CB9EBA /* logofinal.png in Resources */ = {isa = PBXBuildFile; fileRef = 8447DE0520CD6E6C00CB9EBA /* logofinal.png */; };
 		DE764D38F05C24435F7595FC /* Pods_Driveo_Driver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B8B99A83CE057CDEA802FE /* Pods_Driveo_Driver.framework */; };
 /* End PBXBuildFile section */
@@ -61,6 +63,8 @@
 		8405A0D420CEA03500A95E78 /* LocationMangerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationMangerProtocol.swift; sourceTree = "<group>"; };
 		8405A0D620CEA07A00A95E78 /* ErrorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
 		8405A0D820CEA71300A95E78 /* OrderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderCell.xib; sourceTree = "<group>"; };
+		8427C13420CEB7EE00DCB374 /* OrderDetailesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailesView.swift; sourceTree = "<group>"; };
+		8427C13620CEB80700DCB374 /* OrderDetailes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OrderDetailes.storyboard; sourceTree = "<group>"; };
 		8447DE0520CD6E6C00CB9EBA /* logofinal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logofinal.png; sourceTree = "<group>"; };
 		C9B8B99A83CE057CDEA802FE /* Pods_Driveo_Driver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Driveo_Driver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAB285CDEFB5C5B574CB5255 /* Pods-Driveo Driver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Driveo Driver.release.xcconfig"; path = "Pods/Target Support Files/Pods-Driveo Driver/Pods-Driveo Driver.release.xcconfig"; sourceTree = "<group>"; };
@@ -159,6 +163,7 @@
 		840345F020CD4C6900322359 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				8427C13320CEB79B00DCB374 /* OrderDetails */,
 				840345C420CD4C6600322359 /* ViewController.swift */,
 				840345C620CD4C6600322359 /* Main.storyboard */,
 				8405A0D820CEA71300A95E78 /* OrderCell.xib */,
@@ -183,6 +188,15 @@
 				8405A0D420CEA03500A95E78 /* LocationMangerProtocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		8427C13320CEB79B00DCB374 /* OrderDetails */ = {
+			isa = PBXGroup;
+			children = (
+				8427C13420CEB7EE00DCB374 /* OrderDetailesView.swift */,
+				8427C13620CEB80700DCB374 /* OrderDetailes.storyboard */,
+			);
+			path = OrderDetails;
 			sourceTree = "<group>";
 		};
 		935E99ACD794A465C752B664 /* Pods */ = {
@@ -310,6 +324,7 @@
 				840345CD20CD4C6900322359 /* LaunchScreen.storyboard in Resources */,
 				840345CA20CD4C6900322359 /* Assets.xcassets in Resources */,
 				840345C820CD4C6600322359 /* Main.storyboard in Resources */,
+				8427C13720CEB80700DCB374 /* OrderDetailes.storyboard in Resources */,
 				8447DE0620CD6E6C00CB9EBA /* logofinal.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,6 +423,7 @@
 				8405A0D720CEA07A00A95E78 /* ErrorType.swift in Sources */,
 				8405A0CD20CE9D6100A95E78 /* NetworkDAL.swift in Sources */,
 				840345C520CD4C6600322359 /* ViewController.swift in Sources */,
+				8427C13520CEB7EE00DCB374 /* OrderDetailesView.swift in Sources */,
 				8405A0D120CE9E1100A95E78 /* StringExtension.swift in Sources */,
 				8405A0D020CE9E1100A95E78 /* LocationManger.swift in Sources */,
 				840345C320CD4C6600322359 /* AppDelegate.swift in Sources */,
