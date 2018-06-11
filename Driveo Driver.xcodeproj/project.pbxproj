@@ -20,6 +20,8 @@
 		8405A0D520CEA03500A95E78 /* LocationMangerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405A0D420CEA03500A95E78 /* LocationMangerProtocol.swift */; };
 		8405A0D720CEA07A00A95E78 /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405A0D620CEA07A00A95E78 /* ErrorType.swift */; };
 		8405A0D920CEA71300A95E78 /* OrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8405A0D820CEA71300A95E78 /* OrderCell.xib */; };
+		8427C13520CEB7EE00DCB374 /* OrderDetailesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8427C13420CEB7EE00DCB374 /* OrderDetailesView.swift */; };
+		8427C13720CEB80700DCB374 /* OrderDetailes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8427C13620CEB80700DCB374 /* OrderDetailes.storyboard */; };
 		8447DE0620CD6E6C00CB9EBA /* logofinal.png in Resources */ = {isa = PBXBuildFile; fileRef = 8447DE0520CD6E6C00CB9EBA /* logofinal.png */; };
 		8489A9FC20CEB8B4001EF18F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8489A9F820CEB8B4001EF18F /* LoginViewController.swift */; };
 		8489A9FD20CEB8B4001EF18F /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8489A9F920CEB8B4001EF18F /* LoginModel.swift */; };
@@ -78,6 +80,8 @@
 		8405A0D420CEA03500A95E78 /* LocationMangerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationMangerProtocol.swift; sourceTree = "<group>"; };
 		8405A0D620CEA07A00A95E78 /* ErrorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
 		8405A0D820CEA71300A95E78 /* OrderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderCell.xib; sourceTree = "<group>"; };
+		8427C13420CEB7EE00DCB374 /* OrderDetailesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailesView.swift; sourceTree = "<group>"; };
+		8427C13620CEB80700DCB374 /* OrderDetailes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OrderDetailes.storyboard; sourceTree = "<group>"; };
 		8447DE0520CD6E6C00CB9EBA /* logofinal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logofinal.png; sourceTree = "<group>"; };
 		8489A9F820CEB8B4001EF18F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8489A9F920CEB8B4001EF18F /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
@@ -428,6 +432,7 @@
 				840345CA20CD4C6900322359 /* Assets.xcassets in Resources */,
 				8489AA0320CEB8C6001EF18F /* LauchScreen.storyboard in Resources */,
 				840345C820CD4C6600322359 /* Main.storyboard in Resources */,
+				8427C13720CEB80700DCB374 /* OrderDetailes.storyboard in Resources */,
 				8447DE0620CD6E6C00CB9EBA /* logofinal.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
