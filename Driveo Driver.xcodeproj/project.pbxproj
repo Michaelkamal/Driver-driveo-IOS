@@ -128,7 +128,6 @@
 			children = (
 				840345F320CD4C6900322359 /* Protocols */,
 				840345F220CD4C6900322359 /* Utilities */,
-				840345F120CD4C6900322359 /* Pojos */,
 				840345F020CD4C6900322359 /* Screens */,
 				840345C220CD4C6600322359 /* AppDelegate.swift */,
 				8447DE0520CD6E6C00CB9EBA /* logofinal.png */,
@@ -165,13 +164,6 @@
 				8405A0D820CEA71300A95E78 /* OrderCell.xib */,
 			);
 			path = Screens;
-			sourceTree = "<group>";
-		};
-		840345F120CD4C6900322359 /* Pojos */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Pojos;
 			sourceTree = "<group>";
 		};
 		840345F220CD4C6900322359 /* Utilities */ = {
