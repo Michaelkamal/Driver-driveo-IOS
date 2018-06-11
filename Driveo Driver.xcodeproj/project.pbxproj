@@ -32,6 +32,12 @@
 		8489AA0D20CEB94D001EF18F /* SpinnerExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8489AA0A20CEB94C001EF18F /* SpinnerExtention.swift */; };
 		8489AA0E20CEB94D001EF18F /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8489AA0B20CEB94C001EF18F /* UIButtonExtension.swift */; };
 		8489AA0F20CEB94D001EF18F /* LocationMangerProtocolExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8489AA0C20CEB94C001EF18F /* LocationMangerProtocolExtention.swift */; };
+		8489AA1420CEC1F6001EF18F /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8489AA1320CEC1F6001EF18F /* OrderCell.swift */; };
+		8489AA1620CEC350001EF18F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8489AA1520CEC350001EF18F /* HomeView.swift */; };
+		8489AA2620CEC554001EF18F /* LoginModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8489AA2320CEC554001EF18F /* LoginModelProtocol.swift */; };
+		8489AA2720CEC554001EF18F /* LoginPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8489AA2420CEC554001EF18F /* LoginPresenterProtocol.swift */; };
+		8489AA2820CEC554001EF18F /* LoginViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8489AA2520CEC554001EF18F /* LoginViewProtocol.swift */; };
+		8489AA2B20CEC5D5001EF18F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8489AA2A20CEC5D5001EF18F /* User.swift */; };
 		DE764D38F05C24435F7595FC /* Pods_Driveo_Driver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B8B99A83CE057CDEA802FE /* Pods_Driveo_Driver.framework */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +90,12 @@
 		8489AA0A20CEB94C001EF18F /* SpinnerExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinnerExtention.swift; sourceTree = "<group>"; };
 		8489AA0B20CEB94C001EF18F /* UIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		8489AA0C20CEB94C001EF18F /* LocationMangerProtocolExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationMangerProtocolExtention.swift; sourceTree = "<group>"; };
+		8489AA1320CEC1F6001EF18F /* OrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
+		8489AA1520CEC350001EF18F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		8489AA2320CEC554001EF18F /* LoginModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModelProtocol.swift; sourceTree = "<group>"; };
+		8489AA2420CEC554001EF18F /* LoginPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenterProtocol.swift; sourceTree = "<group>"; };
+		8489AA2520CEC554001EF18F /* LoginViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewProtocol.swift; sourceTree = "<group>"; };
+		8489AA2A20CEC5D5001EF18F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C9B8B99A83CE057CDEA802FE /* Pods_Driveo_Driver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Driveo_Driver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAB285CDEFB5C5B574CB5255 /* Pods-Driveo Driver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Driveo Driver.release.xcconfig"; path = "Pods/Target Support Files/Pods-Driveo Driver/Pods-Driveo Driver.release.xcconfig"; sourceTree = "<group>"; };
 		F25983CAFD3069AE2B39A4F7 /* Pods-Driveo Driver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Driveo Driver.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Driveo Driver/Pods-Driveo Driver.debug.xcconfig"; sourceTree = "<group>"; };
@@ -148,6 +160,7 @@
 		840345C120CD4C6600322359 /* Driveo Driver */ = {
 			isa = PBXGroup;
 			children = (
+				8489AA2D20CEC684001EF18F /* Pojos */,
 				840345F320CD4C6900322359 /* Protocols */,
 				840345F220CD4C6900322359 /* Utilities */,
 				840345F020CD4C6900322359 /* Screens */,
@@ -205,6 +218,7 @@
 		840345F320CD4C6900322359 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				8489AA2E20CEC695001EF18F /* LoginProtocols */,
 				8405A0D420CEA03500A95E78 /* LocationMangerProtocol.swift */,
 			);
 			path = Protocols;
@@ -216,6 +230,8 @@
 				840345C420CD4C6600322359 /* ViewController.swift */,
 				840345C620CD4C6600322359 /* Main.storyboard */,
 				8405A0D820CEA71300A95E78 /* OrderCell.xib */,
+				8489AA1320CEC1F6001EF18F /* OrderCell.swift */,
+				8489AA1520CEC350001EF18F /* HomeView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -264,6 +280,24 @@
 				8489AA0B20CEB94C001EF18F /* UIButtonExtension.swift */,
 			);
 			path = UIViewExtensions;
+			sourceTree = "<group>";
+		};
+		8489AA2D20CEC684001EF18F /* Pojos */ = {
+			isa = PBXGroup;
+			children = (
+				8489AA2A20CEC5D5001EF18F /* User.swift */,
+			);
+			path = Pojos;
+			sourceTree = "<group>";
+		};
+		8489AA2E20CEC695001EF18F /* LoginProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				8489AA2320CEC554001EF18F /* LoginModelProtocol.swift */,
+				8489AA2420CEC554001EF18F /* LoginPresenterProtocol.swift */,
+				8489AA2520CEC554001EF18F /* LoginViewProtocol.swift */,
+			);
+			path = LoginProtocols;
 			sourceTree = "<group>";
 		};
 		935E99ACD794A465C752B664 /* Pods */ = {
@@ -488,21 +522,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8489AA2820CEC554001EF18F /* LoginViewProtocol.swift in Sources */,
 				8405A0D520CEA03500A95E78 /* LocationMangerProtocol.swift in Sources */,
 				8489AA0D20CEB94D001EF18F /* SpinnerExtention.swift in Sources */,
 				8489AA0220CEB8C6001EF18F /* SplashView.swift in Sources */,
 				8405A0D720CEA07A00A95E78 /* ErrorType.swift in Sources */,
 				8405A0CD20CE9D6100A95E78 /* NetworkDAL.swift in Sources */,
+				8489AA1620CEC350001EF18F /* HomeView.swift in Sources */,
 				840345C520CD4C6600322359 /* ViewController.swift in Sources */,
+				8489AA2620CEC554001EF18F /* LoginModelProtocol.swift in Sources */,
+				8489AA1420CEC1F6001EF18F /* OrderCell.swift in Sources */,
 				8489A9FF20CEB8B4001EF18F /* LoginPresenter.swift in Sources */,
 				8489A9FD20CEB8B4001EF18F /* LoginModel.swift in Sources */,
 				8489A9FC20CEB8B4001EF18F /* LoginViewController.swift in Sources */,
 				8405A0D120CE9E1100A95E78 /* StringExtension.swift in Sources */,
+				8489AA2720CEC554001EF18F /* LoginPresenterProtocol.swift in Sources */,
 				8405A0D020CE9E1100A95E78 /* LocationManger.swift in Sources */,
 				8489AA0E20CEB94D001EF18F /* UIButtonExtension.swift in Sources */,
 				840345C320CD4C6600322359 /* AppDelegate.swift in Sources */,
 				8489AA0F20CEB94D001EF18F /* LocationMangerProtocolExtention.swift in Sources */,
 				8489AA0820CEB8E3001EF18F /* AboutScreen.swift in Sources */,
+				8489AA2B20CEC5D5001EF18F /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

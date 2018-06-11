@@ -11,7 +11,7 @@ import UIKit
 extension UIButton{
     
     @IBInspectable
-override  public var  cornerRadius:CGFloat{
+    public var  cornerRadius:CGFloat{
         set{
             self.layer.cornerRadius = newValue
         }

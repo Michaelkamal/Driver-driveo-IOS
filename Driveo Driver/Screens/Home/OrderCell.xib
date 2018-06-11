@@ -7,36 +7,68 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="UhJ-Vh-rZN">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OrderCell" id="UhJ-Vh-rZN" customClass="OrderCell" customModule="Driveo_Driver" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="310" height="85"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                 <rect key="frame" x="0.0" y="0.0" width="310" height="85"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xU5-sK-1h6">
-                        <rect key="frame" x="20" y="14" width="42" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xU5-sK-1h6">
+                        <rect key="frame" x="20" y="18" width="20" height="43"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="35.659999847412109"/>
+                        <color key="textColor" red="1" green="0.51372549019607838" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4r-X4-08U">
-                        <rect key="frame" x="79" y="13" width="42" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="o4y-5e-nQZ">
+                        <rect key="frame" x="53.5" y="24" width="239" height="20.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upcoming" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4r-X4-08U">
+                                <rect key="frame" x="0.0" y="0.0" width="133.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.20784313725490194" green="0.20392156862745098" blue="0.23921568627450979" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="id#1234" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T4t-68-FrB">
+                                <rect key="frame" x="141.5" y="0.0" width="97.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.77254901960784317" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="945 abagail address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ooC-xd-Zfw">
+                        <rect key="frame" x="53.5" y="48" width="203" height="16.5"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13.880000114440918"/>
+                        <color key="textColor" red="0.50588235294117645" green="0.5490196078431373" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </view>
+            <constraints>
+                <constraint firstItem="xU5-sK-1h6" firstAttribute="leading" secondItem="UhJ-Vh-rZN" secondAttribute="leading" constant="20.329999999999998" id="4YY-pm-mPp"/>
+                <constraint firstItem="xU5-sK-1h6" firstAttribute="top" secondItem="UhJ-Vh-rZN" secondAttribute="top" constant="18.219999999999999" id="CVy-vs-bdM"/>
+                <constraint firstItem="ooC-xd-Zfw" firstAttribute="leading" secondItem="k5a-Tl-yh0" secondAttribute="leading" constant="53.670000000000002" id="DJC-aK-UCT"/>
+                <constraint firstItem="ooC-xd-Zfw" firstAttribute="centerX" secondItem="UhJ-Vh-rZN" secondAttribute="centerX" id="Gxz-QG-t2N"/>
+                <constraint firstItem="o4y-5e-nQZ" firstAttribute="top" secondItem="UhJ-Vh-rZN" secondAttribute="top" constant="24.219999999999999" id="KOh-5l-QnC"/>
+                <constraint firstAttribute="bottom" secondItem="ooC-xd-Zfw" secondAttribute="bottom" constant="20.670000000000002" id="lcw-ac-Fc7"/>
+                <constraint firstItem="o4y-5e-nQZ" firstAttribute="leading" secondItem="k5a-Tl-yh0" secondAttribute="leading" constant="53.670000000000002" id="rUq-JY-1dd"/>
+                <constraint firstAttribute="trailing" secondItem="o4y-5e-nQZ" secondAttribute="trailing" constant="17.329999999999998" id="yQd-gq-i4Q"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="k5a-Tl-yh0"/>
             <size key="customSize" width="309" height="149"/>
+            <connections>
+                <outlet property="orderAddress" destination="ooC-xd-Zfw" id="bZ6-nR-JNN"/>
+                <outlet property="orderID" destination="T4t-68-FrB" id="fl6-LG-7eV"/>
+                <outlet property="orderNumber" destination="xU5-sK-1h6" id="rf9-TP-TqP"/>
+                <outlet property="orderStatus" destination="j4r-X4-08U" id="eP8-3y-bZ8"/>
+            </connections>
             <point key="canvasLocation" x="83" y="57.5"/>
         </collectionViewCell>
     </objects>
