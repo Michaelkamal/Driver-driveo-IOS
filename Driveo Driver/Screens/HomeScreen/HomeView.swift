@@ -22,6 +22,7 @@ class HomeView: UIViewController,UICollectionViewDataSource,UICollectionViewDele
         ordersCollectionView.dataSource = self
         ordersCollectionView.delegate = self
         ordersCollectionView.backgroundColor = UIColor.clear
+        ordersCollectionView.isScrollEnabled = false
         
     }
     
@@ -72,12 +73,14 @@ class HomeView: UIViewController,UICollectionViewDataSource,UICollectionViewDele
                 self.view.layoutIfNeeded()
             })
             print("swpe dwn")
+            ordersCollectionView.isScrollEnabled = false
         }
         else{
             collectionViewHeight.constant = UIScreen.main.bounds.height - 110
             UIView.animate(withDuration: 0.4, animations: {
                 self.view.layoutIfNeeded()
             })
+            ordersCollectionView.isScrollEnabled = true
             dragGesture.isEnabled = false
             print("swpe up")
         }
