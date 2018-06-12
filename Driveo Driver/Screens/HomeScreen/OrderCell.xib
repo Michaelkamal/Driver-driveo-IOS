@@ -13,7 +13,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OrderCell" id="UhJ-Vh-rZN" customClass="OrderCell" customModule="Driveo_Driver" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="UhJ-Vh-rZN" customClass="OrderCell" customModule="Driveo_Driver" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="310" height="85"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -51,6 +51,7 @@
                     </label>
                 </subviews>
             </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="xU5-sK-1h6" firstAttribute="leading" secondItem="UhJ-Vh-rZN" secondAttribute="leading" constant="20.329999999999998" id="4YY-pm-mPp"/>
                 <constraint firstItem="xU5-sK-1h6" firstAttribute="top" secondItem="UhJ-Vh-rZN" secondAttribute="top" constant="18.219999999999999" id="CVy-vs-bdM"/>

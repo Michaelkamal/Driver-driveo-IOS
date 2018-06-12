@@ -16,7 +16,7 @@
         <!--Login View Controller-->
         <scene sceneID="xLF-sM-JbD">
             <objects>
-                <viewController storyboardIdentifier="loginView" id="xAa-4N-ti6" customClass="LoginViewController" customModule="Driveo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginView" id="xAa-4N-ti6" customClass="LoginViewController" customModule="Driveo_Driver" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rUn-hz-d8v">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -180,7 +180,7 @@
         <!--Forget Password View Controller-->
         <scene sceneID="Gkq-vX-lRw">
             <objects>
-                <viewController storyboardIdentifier="forgotPass" id="UvW-tJ-WaQ" customClass="ForgetPasswordViewController" customModule="Driveo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="forgotPass" id="UvW-tJ-WaQ" customClass="ForgetPasswordViewController" customModule="Driveo_Driver" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="47K-iM-gP5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -304,7 +304,7 @@
         <!--Reset Password View Controller-->
         <scene sceneID="pF0-b0-a4W">
             <objects>
-                <viewController storyboardIdentifier="resetPassword" id="sUC-Kl-8xU" customClass="ResetPasswordViewController" customModule="Driveo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="resetPassword" id="sUC-Kl-8xU" customClass="ResetPasswordViewController" customModule="Driveo_Driver" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Km9-bx-zU9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
