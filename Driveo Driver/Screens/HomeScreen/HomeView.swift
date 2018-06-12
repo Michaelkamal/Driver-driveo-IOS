@@ -9,7 +9,9 @@
 import UIKit
 import GoogleMaps
 
-class HomeView: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,UIGestureRecognizerDelegate {
+class HomeView: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,UIGestureRecognizerDelegate,UICollectionViewDelegateFlowLayout {
+    
+    private var scrollFlag = false;
     
     @IBOutlet weak var ordersCollectionView: UICollectionView!
     @IBOutlet weak var collectionViewHeight: NSLayoutConstraint!
@@ -25,6 +27,14 @@ class HomeView: UIViewController,UICollectionViewDataSource,UICollectionViewDele
         ordersCollectionView.isScrollEnabled = false
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        let factor = 414 / UIScreen.main.bounds.width
+        let value = 13/factor
+        ordersCollectionView.contentInset = UIEdgeInsetsMake(0, value, 0, value)
+    }
+
     
     @IBAction func menuButton(_ sender: Any) {
     }
@@ -48,17 +58,14 @@ class HomeView: UIViewController,UICollectionViewDataSource,UICollectionViewDele
         ordersCollectionView.register(UINib(nibName: "OrderCell", bundle: nil), forCellWithReuseIdentifier: "summaryCell")
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "summaryCell", for: indexPath) as! OrderCell
-        
-        cell.orderAddress.text = "kafr abdou"
-        
-        
-        
+       
         // Configure the cell
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        print("*-/*/*/*/*/*/*/*-*/*-/*-**-/-*/-*/-*/-")
         let factor = 414 / UIScreen.main.bounds.width
         let subtractionValue = 26/factor
         return CGSize(width: UIScreen.main.bounds.width-subtractionValue, height: 85)
@@ -90,10 +97,12 @@ class HomeView: UIViewController,UICollectionViewDataSource,UICollectionViewDele
         print("called")
         return true
     }
+    
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         print(indexPath.item)
         if indexPath.item == 0 {
             dragGesture.isEnabled = true
         }
     }
+    
 }
