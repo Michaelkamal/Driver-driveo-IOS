@@ -546,6 +546,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YDv-qc-nAv"/>
                     </view>
+                    <connections>
+                        <outlet property="orderDate" destination="P8C-ch-mKP" id="Kzu-I7-PJ4"/>
+                        <outlet property="orderDescription" destination="H90-na-M91" id="Lyn-37-np7"/>
+                        <outlet property="orderDropOff" destination="zxB-AT-hNb" id="Hwn-fd-BdH"/>
+                        <outlet property="orderId" destination="CYu-5N-Uqp" id="vhZ-5U-RYf"/>
+                        <outlet property="orderNumber" destination="pD9-13-BNg" id="dQ2-Ww-Qmf"/>
+                        <outlet property="orderPaymentMethod" destination="yK9-eZ-IyT" id="Sfl-Cg-Pxt"/>
+                        <outlet property="orderPickup" destination="5Cg-bH-iqz" id="yyS-Rd-7do"/>
+                        <outlet property="orderTime" destination="vT2-hy-laf" id="4kb-Nd-vxY"/>
+                        <outlet property="orderTitle" destination="SCU-Zp-A0C" id="Exp-aV-kty"/>
+                        <outlet property="ordersImageCollection" destination="h5i-NV-msV" id="Ofs-KU-Ncw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TRW-kN-z2A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
