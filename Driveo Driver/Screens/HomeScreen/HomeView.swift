@@ -12,11 +12,18 @@ import GoogleMaps
 class HomeView: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,UIGestureRecognizerDelegate,UICollectionViewDelegateFlowLayout {
     
     private var scrollFlag = false;
+    @IBOutlet weak var mapV: GMSMapView!
     
     @IBOutlet weak var ordersCollectionView: UICollectionView!
     @IBOutlet weak var collectionViewHeight: NSLayoutConstraint!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet var dragGesture: UIPanGestureRecognizer!
+    
+    var locationManager = CLLocationManager()
+    var currentLocation: CLLocation?
+    var mapView: GMSMapView!
+    //    var placesClient: GMSPlacesClient!
+    var zoomLevel: Float = 15.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +32,17 @@ class HomeView: UIViewController,UICollectionViewDataSource,UICollectionViewDele
         ordersCollectionView.delegate = self
         ordersCollectionView.backgroundColor = UIColor.clear
         ordersCollectionView.isScrollEnabled = false
+     
+        locationManager = CLLocationManager()
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
         
+        locationManager.distanceFilter = 10
+        locationManager.allowsBackgroundLocationUpdates = true
+        //        locationManager.startUpdatingLocation()
+        locationManager.delegate = self
+        locationManager.requestAlwaysAuthorization()
+        locationManager.startUpdatingLocation()
+        //        placesClient = GMSPlacesClient.shared()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,8 +50,16 @@ class HomeView: UIViewController,UICollectionViewDataSource,UICollectionViewDele
         let factor = 414 / UIScreen.main.bounds.width
         let value = 13/factor
         ordersCollectionView.contentInset = UIEdgeInsetsMake(0, value, 0, value)
+        collectionViewHeight.constant = 111.66
+        UIView.animate(withDuration: 0.4, animations: {
+            self.view.layoutIfNeeded()
+        })
     }
 
+    override func loadView() {
+        super.loadView()
+        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
+    }
     
     @IBAction func menuButton(_ sender: Any) {
     }
@@ -106,6 +131,15 @@ class HomeView: UIViewController,UICollectionViewDataSource,UICollectionViewDele
         }
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let detailedStoryboard = UIStoryboard(name: "OrderDetailes", bundle: nil)
+        let detailedView = detailedStoryboard.instantiateViewController(withIdentifier: "OrderDetails") as! OrderDetailesView
+        detailedView.modalPresentationStyle = UIModalPresentationStyle.custom
+        detailedView.transitioningDelegate = self
+        self.present(detailedView, animated: true, completion: nil)
+        collectionViewHeight.constant = 0
+        
+    }
     
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
@@ -139,4 +173,66 @@ class HomeView: UIViewController,UICollectionViewDataSource,UICollectionViewDele
 //    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
 //        dragGesture.isEnabled = true
 //    }
+}
+extension HomeView: UIViewControllerTransitioningDelegate{
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        return DialogueWindow(presentedViewController: presented, presenting: presentingViewController)
+    }
+}
+
+extension HomeView : CLLocationManagerDelegate{
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location: CLLocation = locations.last!
+        print("Location: \(location)")
+        currentLocation = location
+        let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude,
+                                              longitude: location.coordinate.longitude,
+                                              zoom: zoomLevel)
+        
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        marker.title = "Sydney"
+        marker.snippet = "Australia"
+        var img = UIImage.init(named: "ic_myself.png")
+        marker.icon = img
+        marker.iconView?.frame.size = CGSize(width: 33.0, height: 33.0)
+        marker.map = mapV
+        
+        //        if mapView.isHidden {
+        //            mapView.isHidden = false
+        //            mapView.camera = camera
+        //        } else {
+        //            mapView.animate(to: camera)
+        //        }
+        mapV.animate(to: camera)
+        //listLikelyPlaces()
+    }
+    
+    // Handle authorization for the location manager.
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+        case .restricted:
+            print("Location access was restricted.")
+        case .denied:
+            print("User denied access to location.")
+            // Display the map using the default location.
+            
+            locationManager.requestAlwaysAuthorization()
+        //mapView.isHidden = false
+        case .notDetermined:
+            print("Location status not determined.")
+            locationManager.requestAlwaysAuthorization()
+        case .authorizedAlways: fallthrough
+        case .authorizedWhenInUse:
+            print("Location status is OK.")
+            
+            
+        }
+    }
+    
+    // Handle location manager errors.
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        locationManager.stopUpdatingLocation()
+        print("Error: \(error)")
+    }
 }

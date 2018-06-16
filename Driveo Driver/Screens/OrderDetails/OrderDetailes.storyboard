@@ -276,7 +276,7 @@
         <!--Order Detailes View-->
         <scene sceneID="PtJ-E7-wvL">
             <objects>
-                <viewController id="zQH-fm-lGo" customClass="OrderDetailesView" customModule="Driveo_Driver" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OrderDetails" id="zQH-fm-lGo" customClass="OrderDetailesView" customModule="Driveo_Driver" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Ly-3k-nKv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -491,6 +491,11 @@
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="H90-na-M91" secondAttribute="trailing" constant="39" id="zTs-Hc-8fg"/>
                                             <constraint firstItem="FSn-T7-Hq3" firstAttribute="centerX" secondItem="BYL-w7-cV4" secondAttribute="centerX" id="zdh-gB-FOb"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pD9-13-BNg">
                                         <rect key="frame" x="20.5" y="15.5" width="63" height="44"/>
@@ -535,6 +540,11 @@
                                     <constraint firstAttribute="bottom" secondItem="BYL-w7-cV4" secondAttribute="bottom" id="rbd-cx-VL2"/>
                                     <constraint firstItem="BYL-w7-cV4" firstAttribute="width" secondItem="yv5-Ec-p5t" secondAttribute="width" id="uES-6d-K85"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -545,6 +555,11 @@
                             <constraint firstItem="yv5-Ec-p5t" firstAttribute="leading" secondItem="YDv-qc-nAv" secondAttribute="leading" id="uqe-gk-vbk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YDv-qc-nAv"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
                         <outlet property="orderDate" destination="P8C-ch-mKP" id="Kzu-I7-PJ4"/>

@@ -78,6 +78,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="usJ-Dq-AwF" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fed-95-rnT">
                                 <rect key="frame" x="22.5" y="57.5" width="16.5" height="17"/>
                                 <constraints>
@@ -96,11 +100,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="E93-GX-8yb">
-                                <rect key="frame" x="13" y="555.5" width="349" height="111.5"/>
+                                <rect key="frame" x="13" y="667" width="349" height="0.0"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="111.67" id="jjY-5y-bTg"/>
+                                    <constraint firstAttribute="height" id="jjY-5y-bTg"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FY7-gS-G0G">
                                     <size key="itemSize" width="385" height="84"/>
@@ -120,6 +124,11 @@
                                         <gestureRecognizers/>
                                     </collectionViewCell>
                                 </cells>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="8XU-vg-67K" appends="YES" id="L1Q-XJ-Aqj"/>
                                 </connections>
@@ -135,15 +144,20 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="j3F-oT-wie" firstAttribute="centerX" secondItem="CGo-Rd-R7C" secondAttribute="centerX" id="3hc-Rb-dmo"/>
+                            <constraint firstItem="usJ-Dq-AwF" firstAttribute="centerX" secondItem="CGo-Rd-R7C" secondAttribute="centerX" id="8jb-Am-jY6"/>
                             <constraint firstItem="E93-GX-8yb" firstAttribute="bottom" secondItem="0bb-bn-lt9" secondAttribute="bottom" id="AL6-Kh-pZI"/>
+                            <constraint firstItem="0bb-bn-lt9" firstAttribute="trailing" secondItem="usJ-Dq-AwF" secondAttribute="trailing" id="Nhx-Kk-Pnu"/>
                             <constraint firstItem="E93-GX-8yb" firstAttribute="leading" secondItem="0bb-bn-lt9" secondAttribute="leading" constant="13" id="NjP-ur-kEo"/>
                             <constraint firstItem="6vl-LU-2l9" firstAttribute="top" secondItem="j3F-oT-wie" secondAttribute="bottom" constant="7" id="P9l-uM-AKJ"/>
                             <constraint firstItem="Fed-95-rnT" firstAttribute="leading" secondItem="0bb-bn-lt9" secondAttribute="leading" constant="22.329999999999998" id="QtM-tz-CIa"/>
+                            <constraint firstItem="usJ-Dq-AwF" firstAttribute="bottom" secondItem="0bb-bn-lt9" secondAttribute="bottom" id="Xf0-Jz-1Dw"/>
                             <constraint firstItem="j3F-oT-wie" firstAttribute="top" secondItem="0bb-bn-lt9" secondAttribute="top" constant="36" id="Y4S-7I-gEg"/>
                             <constraint firstItem="E93-GX-8yb" firstAttribute="centerX" secondItem="CGo-Rd-R7C" secondAttribute="centerX" id="ZTh-Be-yIG"/>
                             <constraint firstItem="0bb-bn-lt9" firstAttribute="trailing" secondItem="E93-GX-8yb" secondAttribute="trailing" constant="13" id="ZtD-5Q-G8K"/>
                             <constraint firstItem="6vl-LU-2l9" firstAttribute="centerX" secondItem="CGo-Rd-R7C" secondAttribute="centerX" id="fI7-XJ-Wwp"/>
+                            <constraint firstItem="usJ-Dq-AwF" firstAttribute="centerY" secondItem="CGo-Rd-R7C" secondAttribute="centerY" id="fnz-P0-t0p"/>
                             <constraint firstItem="Fed-95-rnT" firstAttribute="top" secondItem="0bb-bn-lt9" secondAttribute="top" constant="37.670000000000002" id="kXH-We-lIZ"/>
+                            <constraint firstItem="usJ-Dq-AwF" firstAttribute="leading" secondItem="CGo-Rd-R7C" secondAttribute="leading" id="uNL-Qr-fMr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0bb-bn-lt9"/>
                     </view>
@@ -151,6 +165,7 @@
                         <outlet property="collectionViewHeight" destination="jjY-5y-bTg" id="XQg-t7-nHP"/>
                         <outlet property="dragGesture" destination="8XU-vg-67K" id="Tvc-jW-oe9"/>
                         <outlet property="locationLabel" destination="6vl-LU-2l9" id="x3s-ND-qZv"/>
+                        <outlet property="mapV" destination="usJ-Dq-AwF" id="zRO-rH-80s"/>
                         <outlet property="ordersCollectionView" destination="E93-GX-8yb" id="Zt4-Lm-k87"/>
                     </connections>
                 </viewController>
@@ -161,7 +176,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="947.82608695652186" y="35.869565217391305"/>
+            <point key="canvasLocation" x="946.39999999999998" y="35.532233883058474"/>
         </scene>
     </scenes>
     <resources>

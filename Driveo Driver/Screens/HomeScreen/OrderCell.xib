@@ -64,6 +64,11 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="k5a-Tl-yh0"/>
             <size key="customSize" width="309" height="149"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="orderAddress" destination="ooC-xd-Zfw" id="bZ6-nR-JNN"/>
                 <outlet property="orderID" destination="T4t-68-FrB" id="fl6-LG-7eV"/>

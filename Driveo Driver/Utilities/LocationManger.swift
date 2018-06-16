@@ -52,7 +52,7 @@ class LocationManager : NSObject,CLLocationManagerDelegate{
         if let location:CLLocation = locations.first{
                 locationReturn?(location)
         }
-        locationMgr.stopUpdatingLocation()
+        //locationMgr.stopUpdatingLocation()
     }
     // mark: Call to update location
     
