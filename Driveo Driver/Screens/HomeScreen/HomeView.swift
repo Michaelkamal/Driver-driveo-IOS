@@ -87,6 +87,7 @@ class HomeView: UIViewController,UICollectionViewDataSource,UICollectionViewDele
             UIView.animate(withDuration: 0.4, animations: {
                 self.view.layoutIfNeeded()
             })
+            
             ordersCollectionView.isScrollEnabled = true
             dragGesture.isEnabled = false
             print("swpe up")
@@ -105,4 +106,37 @@ class HomeView: UIViewController,UICollectionViewDataSource,UICollectionViewDele
         }
     }
     
+    
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+//        if !decelerate {
+//            self.scrollViewDidEndDecelerating(scrollView)
+//        }
+        let translation = scrollView.panGestureRecognizer.translation(in: scrollView.superview)
+        if(translation.y > 0)
+        {
+            
+            if ordersCollectionView.cellForItem(at: IndexPath(item: 0, section: 0)) != nil{
+                if scrollFlag == true{
+                    dragGesture.isEnabled = true
+                    print("7asal akbar")
+                    collectionViewHeight.constant = 111.66
+                    UIView.animate(withDuration: 0.4, animations: {
+                    self.view.layoutIfNeeded()
+                    })
+                }
+                else{
+                    scrollFlag = true
+                }
+            }
+        } else
+        {
+            scrollFlag = false
+            print("7asal asghaar")
+        }
+    }
+
+//    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+//        dragGesture.isEnabled = true
+//    }
 }
