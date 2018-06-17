@@ -61,3 +61,32 @@ class OrderDetailesView: UIViewController {
     */
 
 }
+
+
+extension OrderDetailesView : UICollectionViewDelegate , UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell:UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCell", for: indexPath)
+        
+        let orderImage = cell.viewWithTag(1) as! UIImageView
+        
+        orderImage.image = UIImage.init(named: "ic_splash")
+        
+        return cell
+        
+    }
+    
+    
+    
+    
+    
+    
+}
+
+
+
+
+
