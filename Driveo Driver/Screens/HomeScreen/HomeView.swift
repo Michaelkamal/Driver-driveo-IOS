@@ -9,7 +9,7 @@
 import UIKit
 import GoogleMaps
 
-class HomeView: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,UIGestureRecognizerDelegate,UICollectionViewDelegateFlowLayout {
+class HomeView: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
     
     private var scrollFlag = false;
     @IBOutlet weak var mapV: GMSMapView!
@@ -54,11 +54,6 @@ class HomeView: UIViewController,UICollectionViewDataSource,UICollectionViewDele
         UIView.animate(withDuration: 0.4, animations: {
             self.view.layoutIfNeeded()
         })
-    }
-
-    override func loadView() {
-        super.loadView()
-        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
     }
     
     @IBAction func menuButton(_ sender: Any) {
@@ -112,22 +107,9 @@ class HomeView: UIViewController,UICollectionViewDataSource,UICollectionViewDele
             UIView.animate(withDuration: 0.4, animations: {
                 self.view.layoutIfNeeded()
             })
-            
             ordersCollectionView.isScrollEnabled = true
             dragGesture.isEnabled = false
             print("swpe up")
-        }
-    }
-    
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
-        print("called")
-        return true
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        print(indexPath.item)
-        if indexPath.item == 0 {
-            dragGesture.isEnabled = true
         }
     }
     
@@ -140,12 +122,28 @@ class HomeView: UIViewController,UICollectionViewDataSource,UICollectionViewDele
         collectionViewHeight.constant = 0
         
     }
+
+//    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+//        dragGesture.isEnabled = true
+//    }
+}
+
+extension HomeView:UIGestureRecognizerDelegate,UICollectionViewDelegateFlowLayout{
+    
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        print("called")
+        return true
+    }
+//
+//    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+//        print(indexPath.item)
+//        if indexPath.item == 0 {
+//            dragGesture.isEnabled = true
+//        }
+//    }
     
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-//        if !decelerate {
-//            self.scrollViewDidEndDecelerating(scrollView)
-//        }
         let translation = scrollView.panGestureRecognizer.translation(in: scrollView.superview)
         if(translation.y > 0)
         {
@@ -156,7 +154,7 @@ class HomeView: UIViewController,UICollectionViewDataSource,UICollectionViewDele
                     print("7asal akbar")
                     collectionViewHeight.constant = 111.66
                     UIView.animate(withDuration: 0.4, animations: {
-                    self.view.layoutIfNeeded()
+                        self.view.layoutIfNeeded()
                     })
                 }
                 else{
@@ -169,11 +167,9 @@ class HomeView: UIViewController,UICollectionViewDataSource,UICollectionViewDele
             print("7asal asghaar")
         }
     }
-
-//    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-//        dragGesture.isEnabled = true
-//    }
+    
 }
+
 extension HomeView: UIViewControllerTransitioningDelegate{
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         return DialogueWindow(presentedViewController: presented, presenting: presentingViewController)
