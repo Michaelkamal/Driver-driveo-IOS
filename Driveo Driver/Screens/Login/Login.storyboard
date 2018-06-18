@@ -9,7 +9,6 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -88,46 +87,18 @@
                                                     <constraint firstAttribute="height" constant="54.670000000000002" id="l5J-4c-ECA"/>
                                                 </constraints>
                                             </imageView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bM7-1h-gHB" userLabel="I">
-                                                <rect key="frame" x="69" y="653" width="276" height="30"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUE-WV-oJ4">
-                                                        <rect key="frame" x="0.0" y="0.0" width="179" height="30"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.56862745100000001" green="0.61176470589999998" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XDL-hy-RdR">
-                                                        <rect key="frame" x="187" y="0.0" width="89" height="30"/>
-                                                        <state key="normal" title="Register now">
-                                                            <color key="titleColor" red="0.96862745098039216" green="0.67450980392156867" blue="0.45098039215686275" alpha="1" colorSpace="calibratedRGB"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="registerBut:" destination="xAa-4N-ti6" eventType="touchUpInside" id="U99-hk-0Yf"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="bl9-0R-nTU"/>
-                                                </constraints>
-                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="bM7-1h-gHB" firstAttribute="top" secondItem="BDW-Ie-kgj" secondAttribute="bottom" priority="750" constant="48" id="4v8-Ev-MBA"/>
                                             <constraint firstItem="2Z0-MT-wf8" firstAttribute="top" relation="greaterThanOrEqual" secondItem="MeJ-ux-SKr" secondAttribute="top" constant="86.879999999999995" id="AVp-nA-SQ0"/>
                                             <constraint firstItem="G3n-0W-IWW" firstAttribute="top" secondItem="qCA-Mm-Axb" secondAttribute="bottom" priority="750" constant="46.659999999999997" id="ECW-y6-pmT"/>
                                             <constraint firstItem="qCA-Mm-Axb" firstAttribute="centerX" secondItem="MeJ-ux-SKr" secondAttribute="centerX" id="EEM-66-UQ8"/>
                                             <constraint firstItem="V2y-3f-DS6" firstAttribute="top" secondItem="G3n-0W-IWW" secondAttribute="bottom" constant="16.199999999999999" id="GAc-q9-J6N"/>
-                                            <constraint firstAttribute="bottom" secondItem="bM7-1h-gHB" secondAttribute="bottom" priority="750" constant="53" id="PQM-5Y-5XW"/>
-                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="bM7-1h-gHB" secondAttribute="bottom" constant="33" id="Q4d-v2-owK"/>
                                             <constraint firstItem="2Z0-MT-wf8" firstAttribute="centerX" secondItem="MeJ-ux-SKr" secondAttribute="centerX" id="YZE-bY-IJf"/>
-                                            <constraint firstItem="bM7-1h-gHB" firstAttribute="top" relation="greaterThanOrEqual" secondItem="BDW-Ie-kgj" secondAttribute="bottom" constant="34" id="Yhp-rv-3xB"/>
                                             <constraint firstItem="BDW-Ie-kgj" firstAttribute="top" relation="greaterThanOrEqual" secondItem="V2y-3f-DS6" secondAttribute="bottom" constant="34" id="ccw-es-FJX"/>
                                             <constraint firstItem="2Z0-MT-wf8" firstAttribute="top" secondItem="MeJ-ux-SKr" secondAttribute="top" priority="750" constant="139" id="cv0-d4-6IA"/>
                                             <constraint firstItem="V2y-3f-DS6" firstAttribute="centerX" secondItem="MeJ-ux-SKr" secondAttribute="centerX" id="dgF-zc-g24"/>
                                             <constraint firstItem="BDW-Ie-kgj" firstAttribute="top" secondItem="V2y-3f-DS6" secondAttribute="bottom" priority="750" constant="55" id="f4U-u0-cu2"/>
-                                            <constraint firstItem="bM7-1h-gHB" firstAttribute="centerX" secondItem="MeJ-ux-SKr" secondAttribute="centerX" id="fnS-5z-WV1"/>
                                             <constraint firstItem="BDW-Ie-kgj" firstAttribute="centerX" secondItem="MeJ-ux-SKr" secondAttribute="centerX" id="iVu-DB-ZmE"/>
                                             <constraint firstItem="G3n-0W-IWW" firstAttribute="top" relation="greaterThanOrEqual" secondItem="qCA-Mm-Axb" secondAttribute="bottom" constant="30" id="oIb-Qo-d5U"/>
                                             <constraint firstItem="G3n-0W-IWW" firstAttribute="centerX" secondItem="MeJ-ux-SKr" secondAttribute="centerX" id="sYX-99-A1J"/>

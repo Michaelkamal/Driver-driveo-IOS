@@ -73,7 +73,7 @@
         <!--Home View-->
         <scene sceneID="S2m-IP-mZH">
             <objects>
-                <viewController id="GsH-vp-Mwv" customClass="HomeView" customModule="Driveo_Driver" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeView" id="GsH-vp-Mwv" customClass="HomeView" customModule="Driveo_Driver" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CGo-Rd-R7C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

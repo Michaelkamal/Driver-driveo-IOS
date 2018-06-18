@@ -20,26 +20,27 @@ class LoginModel : LoginModelProtocol{
         let networkObj:NetworkDAL = NetworkDAL.sharedInstance()
         let user = User(email: name, phone: "", password: pass)
         let params = user.getUserDataInDictionary()
-        networkObj.processPostReq(withBaseUrl: .mainApi, andUrlSuffix: "authentication/signin", andParameters: params, onSuccess: onSuccess, onFailure: onFailure)
+        networkObj.processPostReq(withBaseUrl: .mainApi, andUrlSuffix: SuffixUrl.login.rawValue, andParameters: params, onSuccess: onSuccess, onFailure: onFailure)
     }
     
-    func onSuccess(_ response:Any) -> Void{
+    func onSuccess(_ response:Data) -> Void{
         print(response)
-        let user = User(email: "", phone: "", password: "")
-        let dict = response as! Dictionary<String,Any>
-        let defaults = UserDefaults.standard
-        let token = dict["auth_token"] as! String
-        let message = dict["message"] as! String
-        
-        print(token)
-        if message.contains("success") {
-            defaults.set(token, forKey :"auth_token")
-            defaults.set(true, forKey :"verified")
-            defaults.synchronize()
-            lp.loginSuccess(user: user, token: token)
+        do{
+            let response = try JSONDecoder().decode(SigninResult.self, from: response)
+            if  let token = response.auth_token {
+                let defaults = UserDefaults.standard
+                print(response.auth_token)
+                defaults.set(response.auth_token, forKey :"auth_token")
+                defaults.synchronize()
+                lp.loginSuccess(page: "next")
+            }else{
+                lp.loginFailure(message: response.message!)
+            }
         }
-        else{
-            lp.loginFailure(message: message)
+        catch {
+            print("catch")
+            print(ErrorType.parse.rawValue)
+            lp.loginFailure(message: "Connection error")
         }
         
     }

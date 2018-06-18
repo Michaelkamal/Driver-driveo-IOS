@@ -28,6 +28,7 @@ class HomeView: UIViewController,UICollectionViewDataSource,UICollectionViewDele
     override func viewDidLoad() {
         super.viewDidLoad()
         dragGesture.delegate = self
+        
         ordersCollectionView.dataSource = self
         ordersCollectionView.delegate = self
         ordersCollectionView.backgroundColor = UIColor.clear
@@ -70,7 +71,7 @@ class HomeView: UIViewController,UICollectionViewDataSource,UICollectionViewDele
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return 6
     }
     
     
@@ -107,8 +108,10 @@ class HomeView: UIViewController,UICollectionViewDataSource,UICollectionViewDele
             UIView.animate(withDuration: 0.4, animations: {
                 self.view.layoutIfNeeded()
             })
-            ordersCollectionView.isScrollEnabled = true
-            dragGesture.isEnabled = false
+            if ordersCollectionView.contentSize.height >= UIScreen.main.bounds.height - 110{
+                ordersCollectionView.isScrollEnabled = true
+                dragGesture.isEnabled = false
+            }
             print("swpe up")
         }
     }

@@ -10,38 +10,25 @@ import UIKit
 
 class OrderDetailesView: UIViewController {
 
-    
+    var scrollFlag = false;
     
     @IBOutlet weak var orderNumber: UILabel!
-
     @IBOutlet weak var orderDate: UILabel!
-
     @IBOutlet weak var orderTime: UILabel!
-    
     @IBOutlet weak var orderId: UILabel!
-    
     @IBOutlet weak var orderTitle: UILabel!
-    
-    
     @IBOutlet weak var orderDescription: UILabel!
-    
-    
-    
     @IBOutlet weak var ordersImageCollection: UICollectionView!
-    
     @IBOutlet weak var orderPaymentMethod: UILabel!
-    
     @IBOutlet weak var orderPickup: UILabel!
-    
     @IBOutlet weak var orderDropOff: UILabel!
-    
-    
-    
+    @IBOutlet weak var scrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        scrollFlag = false
 
-        // Do any additional setup after loading the view.
+        scrollView.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,17 +36,10 @@ class OrderDetailesView: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func closeButtonAction(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
-    */
-
+    
 }
 
 
@@ -79,12 +59,30 @@ extension OrderDetailesView : UICollectionViewDelegate , UICollectionViewDataSou
         
     }
     
-    
-    
-    
-    
-    
 }
+
+//extension OrderDetailesView:UIGestureRecognizerDelegate,UICollectionViewDelegateFlowLayout,UIScrollViewDelegate{
+//    
+//    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+//        print("called")
+//        return true
+//    }
+//    
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        print("beyscroll")
+//        if (scrollView.contentOffset.y <= -50) {
+//            print("scrolled to top")
+//            if scrollFlag == true{
+//                print("hnnzel")
+//                self.dismiss(animated: true, completion: nil)
+//            }
+//            else{
+//                scrollFlag = true
+//            }
+//        }
+//    }
+//}
+
 
 
 

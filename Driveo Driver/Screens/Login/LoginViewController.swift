@@ -32,11 +32,6 @@ class LoginViewController: UIViewController , LoginViewProtocol {
         let forgotPassView = self.storyboard?.instantiateViewController(withIdentifier: "forgotPass")
         self.present(forgotPassView!, animated: true, completion: nil)
     }
-    @IBAction func registerBut(_ sender: Any) {
-        let signupStoryboard = UIStoryboard(name: "SignupStoryboard", bundle: nil)
-        let signup = signupStoryboard.instantiateViewController(withIdentifier: "SignupView")
-        self.present(signup, animated: true, completion: nil)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,10 +49,10 @@ class LoginViewController: UIViewController , LoginViewProtocol {
     }
     func goToScreen(withScreenName name:String){
         if name == "next"{
-            print("PickLoacationViewController")
-            let sourceScreenStoryboard = UIStoryboard(name: "SourceScreen", bundle: nil)
-            let signup = sourceScreenStoryboard.instantiateViewController(withIdentifier: "PickLoacationViewController")
-            self.present(signup, animated: true, completion: nil)
+            print("main")
+            let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let homeView = mainStoryboard.instantiateViewController(withIdentifier: "HomeView")
+            self.present(homeView, animated: true, completion: nil)
         }
     }
     
