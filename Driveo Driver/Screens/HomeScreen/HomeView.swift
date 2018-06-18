@@ -135,6 +135,8 @@ class HomeView: UIViewController,UICollectionViewDataSource,UICollectionViewDele
         UIView.animate(withDuration: 1.1, animations: {
             self.view.layoutIfNeeded()
         })
+        ordersCollectionView.isScrollEnabled = false
+        dragGesture.isEnabled = true
     }
 
 //    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
