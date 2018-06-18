@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8402D82320D84E31000D864D /* UserAuthenticationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402D82220D84E31000D864D /* UserAuthenticationResult.swift */; };
+		8402D82520D86828000D864D /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402D82420D86828000D864D /* Order.swift */; };
 		840345C320CD4C6600322359 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840345C220CD4C6600322359 /* AppDelegate.swift */; };
 		840345C520CD4C6600322359 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840345C420CD4C6600322359 /* ViewController.swift */; };
 		840345C820CD4C6600322359 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840345C620CD4C6600322359 /* Main.storyboard */; };
@@ -65,6 +66,7 @@
 
 /* Begin PBXFileReference section */
 		8402D82220D84E31000D864D /* UserAuthenticationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthenticationResult.swift; sourceTree = "<group>"; };
+		8402D82420D86828000D864D /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		840345BF20CD4C6600322359 /* Driveo Driver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Driveo Driver.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		840345C220CD4C6600322359 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		840345C420CD4C6600322359 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -291,6 +293,7 @@
 			children = (
 				8489AA2A20CEC5D5001EF18F /* User.swift */,
 				8402D82220D84E31000D864D /* UserAuthenticationResult.swift */,
+				8402D82420D86828000D864D /* Order.swift */,
 			);
 			path = Pojos;
 			sourceTree = "<group>";
@@ -558,6 +561,7 @@
 				8405A0CD20CE9D6100A95E78 /* NetworkDAL.swift in Sources */,
 				8489AA1620CEC350001EF18F /* HomeView.swift in Sources */,
 				8402D82320D84E31000D864D /* UserAuthenticationResult.swift in Sources */,
+				8402D82520D86828000D864D /* Order.swift in Sources */,
 				840345C520CD4C6600322359 /* ViewController.swift in Sources */,
 				8489AA2620CEC554001EF18F /* LoginModelProtocol.swift in Sources */,
 				8489AA1420CEC1F6001EF18F /* OrderCell.swift in Sources */,

@@ -11,6 +11,9 @@ import UIKit
 class OrderDetailesView: UIViewController {
 
     var scrollFlag = false;
+    var order = 0
+    
+    var dismissCompleted:(()->Void)!
     
     @IBOutlet weak var orderNumber: UILabel!
     @IBOutlet weak var orderDate: UILabel!
@@ -37,7 +40,7 @@ class OrderDetailesView: UIViewController {
     }
     
     @IBAction func closeButtonAction(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: dismissCompleted)
     }
     
 }

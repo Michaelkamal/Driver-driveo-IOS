@@ -52,7 +52,7 @@ class HomeView: UIViewController,UICollectionViewDataSource,UICollectionViewDele
         let value = 13/factor
         ordersCollectionView.contentInset = UIEdgeInsetsMake(0, value, 0, value)
         collectionViewHeight.constant = 111.66
-        UIView.animate(withDuration: 0.4, animations: {
+        UIView.animate(withDuration: 1.1, animations: {
             self.view.layoutIfNeeded()
         })
     }
@@ -119,11 +119,22 @@ class HomeView: UIViewController,UICollectionViewDataSource,UICollectionViewDele
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let detailedStoryboard = UIStoryboard(name: "OrderDetailes", bundle: nil)
         let detailedView = detailedStoryboard.instantiateViewController(withIdentifier: "OrderDetails") as! OrderDetailesView
+        detailedView.dismissCompleted = dialogueClosed
         detailedView.modalPresentationStyle = UIModalPresentationStyle.custom
         detailedView.transitioningDelegate = self
         self.present(detailedView, animated: true, completion: nil)
         collectionViewHeight.constant = 0
         
+    }
+    
+    func dialogueClosed() ->Void {
+        let factor = 414 / UIScreen.main.bounds.width
+        let value = 13/factor
+        ordersCollectionView.contentInset = UIEdgeInsetsMake(0, value, 0, value)
+        collectionViewHeight.constant = 111.66
+        UIView.animate(withDuration: 1.1, animations: {
+            self.view.layoutIfNeeded()
+        })
     }
 
 //    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
@@ -159,6 +170,7 @@ extension HomeView:UIGestureRecognizerDelegate,UICollectionViewDelegateFlowLayou
             }
         }
     }
+    
     
 //    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
 //        let translation = scrollView.panGestureRecognizer.translation(in: scrollView.superview)
