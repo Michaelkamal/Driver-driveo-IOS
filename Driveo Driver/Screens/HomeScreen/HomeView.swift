@@ -141,32 +141,46 @@ extension HomeView:UIGestureRecognizerDelegate,UICollectionViewDelegateFlowLayou
 //            dragGesture.isEnabled = true
 //        }
 //    }
-    
-    
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        let translation = scrollView.panGestureRecognizer.translation(in: scrollView.superview)
-        if(translation.y > 0)
-        {
-            
-            if ordersCollectionView.cellForItem(at: IndexPath(item: 0, section: 0)) != nil{
-                if scrollFlag == true{
-                    dragGesture.isEnabled = true
-                    print("7asal akbar")
-                    collectionViewHeight.constant = 111.66
-                    UIView.animate(withDuration: 0.4, animations: {
-                        self.view.layoutIfNeeded()
-                    })
-                }
-                else{
-                    scrollFlag = true
-                }
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if (scrollView.contentOffset.y <= -50) {
+            if scrollFlag == true{
+                dragGesture.isEnabled = true
+                print("7asal akbar")
+                collectionViewHeight.constant = 111.66
+                UIView.animate(withDuration: 0.4, animations: {
+                    self.view.layoutIfNeeded()
+                })
             }
-        } else
-        {
-            scrollFlag = false
-            print("7asal asghaar")
+            else{
+                scrollFlag = true
+            }
         }
     }
+    
+//    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+//        let translation = scrollView.panGestureRecognizer.translation(in: scrollView.superview)
+//        if(translation.y > 0)
+//        {
+//
+//            if ordersCollectionView.cellForItem(at: IndexPath(item: 0, section: 0)) != nil{
+//                if scrollFlag == true{
+//                    dragGesture.isEnabled = true
+//                    print("7asal akbar")
+//                    collectionViewHeight.constant = 111.66
+//                    UIView.animate(withDuration: 0.4, animations: {
+//                        self.view.layoutIfNeeded()
+//                    })
+//                }
+//                else{
+//                    scrollFlag = true
+//                }
+//            }
+//        } else
+//        {
+//            scrollFlag = false
+//            print("7asal asghaar")
+//        }
+//    }
     
 }
 
