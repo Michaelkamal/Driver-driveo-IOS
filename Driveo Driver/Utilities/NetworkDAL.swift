@@ -52,7 +52,7 @@ public class NetworkDAL{
     internal func processPostReq(
         withBaseUrl baseUrl:ApiBaseUrl,
         andUrlSuffix urlSuffix:String,
-        andParameters param: Parameters,
+        andParameters param: Parameters? = nil,
         onSuccess: @escaping (_ :Data)->Void,
         onFailure:  @escaping (_ networkError:ErrorType)->Void
         , headers:HTTPHeaders? = nil)-> Void{

@@ -13,3 +13,8 @@ struct SigninResult : Decodable{
     var auth_token:String?
     
 }
+
+struct SuccessResult:Decodable {
+    var message:String?
+    
+}

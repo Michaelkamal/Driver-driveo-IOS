@@ -18,7 +18,7 @@ class LoginModel : LoginModelProtocol{
     
     func sendRequest(withUserName name:String,andPassword pass:String){
         let networkObj:NetworkDAL = NetworkDAL.sharedInstance()
-        let user = User(email: name, phone: "", password: pass)
+        let user = Driver(email: name, phone: "", password: pass)
         let params = user.getUserDataInDictionary()
         networkObj.processPostReq(withBaseUrl: .mainApi, andUrlSuffix: SuffixUrl.login.rawValue, andParameters: params, onSuccess: onSuccess, onFailure: onFailure)
     }
