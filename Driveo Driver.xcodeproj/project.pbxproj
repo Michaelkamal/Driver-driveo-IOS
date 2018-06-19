@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84028B2320D877BC009CA347 /* HomePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84028B2220D877BC009CA347 /* HomePresenterProtocol.swift */; };
+		84028B2520D877D5009CA347 /* HomeModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84028B2420D877D5009CA347 /* HomeModelProtocol.swift */; };
+		84028B2720D87815009CA347 /* HomeViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84028B2620D87815009CA347 /* HomeViewProtocol.swift */; };
+		84028B2920D87AC7009CA347 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84028B2820D87AC7009CA347 /* HomePresenter.swift */; };
+		84028B2B20D87AD7009CA347 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84028B2A20D87AD7009CA347 /* HomeModel.swift */; };
 		8402D82320D84E31000D864D /* UserAuthenticationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402D82220D84E31000D864D /* UserAuthenticationResult.swift */; };
 		8402D82520D86828000D864D /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402D82420D86828000D864D /* Order.swift */; };
 		840345C320CD4C6600322359 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840345C220CD4C6600322359 /* AppDelegate.swift */; };
@@ -65,6 +70,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		84028B2220D877BC009CA347 /* HomePresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterProtocol.swift; sourceTree = "<group>"; };
+		84028B2420D877D5009CA347 /* HomeModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModelProtocol.swift; sourceTree = "<group>"; };
+		84028B2620D87815009CA347 /* HomeViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewProtocol.swift; sourceTree = "<group>"; };
+		84028B2820D87AC7009CA347 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		84028B2A20D87AD7009CA347 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		8402D82220D84E31000D864D /* UserAuthenticationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthenticationResult.swift; sourceTree = "<group>"; };
 		8402D82420D86828000D864D /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		840345BF20CD4C6600322359 /* Driveo Driver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Driveo Driver.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,6 +156,16 @@
 				C9B8B99A83CE057CDEA802FE /* Pods_Driveo_Driver.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84028B2120D876FE009CA347 /* HomeProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				84028B2220D877BC009CA347 /* HomePresenterProtocol.swift */,
+				84028B2420D877D5009CA347 /* HomeModelProtocol.swift */,
+				84028B2620D87815009CA347 /* HomeViewProtocol.swift */,
+			);
+			path = HomeProtocols;
 			sourceTree = "<group>";
 		};
 		840345B620CD4C6500322359 = {
@@ -232,6 +252,7 @@
 		840345F320CD4C6900322359 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				84028B2120D876FE009CA347 /* HomeProtocols */,
 				8489AA2E20CEC695001EF18F /* LoginProtocols */,
 				8405A0D420CEA03500A95E78 /* LocationMangerProtocol.swift */,
 			);
@@ -324,6 +345,8 @@
 				8405A0D820CEA71300A95E78 /* OrderCell.xib */,
 				8489AA1320CEC1F6001EF18F /* OrderCell.swift */,
 				8489AA1520CEC350001EF18F /* HomeView.swift */,
+				84028B2820D87AC7009CA347 /* HomePresenter.swift */,
+				84028B2A20D87AD7009CA347 /* HomeModel.swift */,
 			);
 			path = HomeScreen;
 			sourceTree = "<group>";
@@ -553,6 +576,8 @@
 			files = (
 				8407C27E20D5738C00D691CD /* DialogueWindow.swift in Sources */,
 				8489AA2820CEC554001EF18F /* LoginViewProtocol.swift in Sources */,
+				84028B2320D877BC009CA347 /* HomePresenterProtocol.swift in Sources */,
+				84028B2920D87AC7009CA347 /* HomePresenter.swift in Sources */,
 				8405A0D520CEA03500A95E78 /* LocationMangerProtocol.swift in Sources */,
 				8489AA0D20CEB94D001EF18F /* SpinnerExtention.swift in Sources */,
 				8489AA0220CEB8C6001EF18F /* SplashView.swift in Sources */,
@@ -564,6 +589,7 @@
 				8402D82520D86828000D864D /* Order.swift in Sources */,
 				840345C520CD4C6600322359 /* ViewController.swift in Sources */,
 				8489AA2620CEC554001EF18F /* LoginModelProtocol.swift in Sources */,
+				84028B2520D877D5009CA347 /* HomeModelProtocol.swift in Sources */,
 				8489AA1420CEC1F6001EF18F /* OrderCell.swift in Sources */,
 				8489A9FF20CEB8B4001EF18F /* LoginPresenter.swift in Sources */,
 				8489A9FD20CEB8B4001EF18F /* LoginModel.swift in Sources */,
@@ -571,11 +597,13 @@
 				8405A0D120CE9E1100A95E78 /* StringExtension.swift in Sources */,
 				8489AA2720CEC554001EF18F /* LoginPresenterProtocol.swift in Sources */,
 				8405A0D020CE9E1100A95E78 /* LocationManger.swift in Sources */,
+				84028B2B20D87AD7009CA347 /* HomeModel.swift in Sources */,
 				8489AA0E20CEB94D001EF18F /* UIButtonExtension.swift in Sources */,
 				840345C320CD4C6600322359 /* AppDelegate.swift in Sources */,
 				8427C14720CED0B200DCB374 /* OrderDetailesView.swift in Sources */,
 				8489AA0F20CEB94D001EF18F /* LocationMangerProtocolExtention.swift in Sources */,
 				8489AA0820CEB8E3001EF18F /* AboutScreen.swift in Sources */,
+				84028B2720D87815009CA347 /* HomeViewProtocol.swift in Sources */,
 				8489AA2B20CEC5D5001EF18F /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

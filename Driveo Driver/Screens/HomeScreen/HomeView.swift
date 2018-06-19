@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import GooglePlaces
 import GoogleMaps
 
 class HomeView: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
     
+    
     private var scrollFlag = false;
+    private var homePresenter:HomePresenterProtocol!
+    
+    
     @IBOutlet weak var mapV: GMSMapView!
     
     @IBOutlet weak var ordersCollectionView: UICollectionView!
@@ -25,8 +30,15 @@ class HomeView: UIViewController,UICollectionViewDataSource,UICollectionViewDele
     //    var placesClient: GMSPlacesClient!
     var zoomLevel: Float = 15.0
     
+    var marker:GMSMarker!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        marker = GMSMarker()
+        
+        homePresenter = HomePresenter(withController: self)
+        
         dragGesture.delegate = self
         
         ordersCollectionView.dataSource = self
@@ -212,14 +224,21 @@ extension HomeView : CLLocationManagerDelegate{
         let location: CLLocation = locations.last!
         print("Location: \(location)")
         currentLocation = location
+        
+        homePresenter.updateLocation(longitude: Float(location.coordinate.longitude), latitude: Float(location.coordinate.latitude))
+        let geocoder = GMSGeocoder()
+        
+        geocoder.reverseGeocodeCoordinate(location.coordinate) { (response, error) in
+            self.marker.title = response?.firstResult()?.country
+            self.marker.snippet = response?.firstResult()?.lines![0]
+            print(response?.firstResult()?.lines![0])
+        }
+        
+        
         let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude,
                                               longitude: location.coordinate.longitude,
                                               zoom: zoomLevel)
-        
-        let marker = GMSMarker()
         marker.position = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-        marker.title = "Sydney"
-        marker.snippet = "Australia"
         var img = UIImage.init(named: "ic_myself.png")
         marker.icon = img
         marker.iconView?.frame.size = CGSize(width: 33.0, height: 33.0)
@@ -261,5 +280,26 @@ extension HomeView : CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         locationManager.stopUpdatingLocation()
         print("Error: \(error)")
+    }
+}
+
+extension HomeView:HomeViewProtocol{
+    func showAlert(withTitle title :String , andMessage msg:String){
+        var alert:UIAlertController = UIViewController.getCustomAlertController(ofErrorType: msg, withTitle: title)
+        self.present(alert, animated: true, completion: nil)
+        let dismissAlertAction:UIAlertAction = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(dismissAlertAction)
+    }
+    
+    func onFailure(message: String) {
+        showAlert(withTitle: "Failure", andMessage: message)
+    }
+    
+    func dismissLoading() {
+        
+    }
+    
+    func goToScreen(withScreenName name: String) {
+        
     }
 }

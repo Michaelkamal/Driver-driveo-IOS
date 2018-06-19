@@ -15,12 +15,19 @@ class ViewController: UIViewController {
     var locationManager = CLLocationManager()
     var currentLocation: CLLocation?
     var mapView: GMSMapView!
+    
+    var marker:GMSMarker!
+    
 //    var placesClient: GMSPlacesClient!
     var zoomLevel: Float = 15.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        marker = GMSMarker()
+        
+        
         locationManager = CLLocationManager()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         
@@ -65,7 +72,7 @@ extension ViewController: CLLocationManagerDelegate{
                                               longitude: location.coordinate.longitude,
                                               zoom: zoomLevel)
         
-        let marker = GMSMarker()
+        
         marker.position = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
         marker.title = "Sydney"
         marker.snippet = "Australia"
