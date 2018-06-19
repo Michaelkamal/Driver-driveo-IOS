@@ -102,7 +102,6 @@
                                             <constraint firstItem="BDW-Ie-kgj" firstAttribute="centerX" secondItem="MeJ-ux-SKr" secondAttribute="centerX" id="iVu-DB-ZmE"/>
                                             <constraint firstItem="G3n-0W-IWW" firstAttribute="top" relation="greaterThanOrEqual" secondItem="qCA-Mm-Axb" secondAttribute="bottom" constant="30" id="oIb-Qo-d5U"/>
                                             <constraint firstItem="G3n-0W-IWW" firstAttribute="centerX" secondItem="MeJ-ux-SKr" secondAttribute="centerX" id="sYX-99-A1J"/>
-                                            <constraint firstAttribute="width" constant="414" id="vm1-ej-nyb"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s15-Lj-7pl">

@@ -70,6 +70,8 @@ class HomeView: UIViewController,UICollectionViewDataSource,UICollectionViewDele
     }
     
     @IBAction func menuButton(_ sender: Any) {
+        let navDrawer = self.storyboard?.instantiateViewController(withIdentifier: "navDrawer")
+        self.present(navDrawer!, animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {
@@ -231,7 +233,6 @@ extension HomeView : CLLocationManagerDelegate{
         geocoder.reverseGeocodeCoordinate(location.coordinate) { (response, error) in
             self.marker.title = response?.firstResult()?.country
             self.marker.snippet = response?.firstResult()?.lines![0]
-            print(response?.firstResult()?.lines![0])
         }
         
         
