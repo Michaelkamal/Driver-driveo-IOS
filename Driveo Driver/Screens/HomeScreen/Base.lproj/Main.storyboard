@@ -173,7 +173,7 @@
         <!--Navigation Drawer-->
         <scene sceneID="P7s-DQ-Bwj">
             <objects>
-                <viewController storyboardIdentifier="navDrawer" modalTransitionStyle="flipHorizontal" id="zIM-X4-zhR" customClass="NavigationDrawer" customModule="Driveo_Driver" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="navDrawer" id="zIM-X4-zhR" customClass="NavigationDrawer" customModule="Driveo_Driver" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C9o-xS-lUU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -71,7 +71,7 @@ class HomeView: UIViewController,UICollectionViewDataSource,UICollectionViewDele
     
     @IBAction func menuButton(_ sender: Any) {
         let navDrawer = self.storyboard?.instantiateViewController(withIdentifier: "navDrawer")
-        self.present(navDrawer!, animated: true, completion: nil)
+        self.presentDrawer(drawer: navDrawer!)
     }
     
     override func didReceiveMemoryWarning() {

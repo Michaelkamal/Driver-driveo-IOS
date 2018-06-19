@@ -15,10 +15,11 @@ class NavigationDrawer: UIViewController {
     
     
     @IBAction func closeView(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        self.dismissFromDrawer()
+        
     }
     @IBAction func goToHomePage(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        self.dismissFromDrawer()
     }
     @IBAction func myHistory(_ sender: UIButton) {
     }
